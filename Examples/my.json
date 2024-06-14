@@ -1,0 +1,41 @@
+{
+  "github": {
+    "org_name": "unstabl3"
+  },
+  "settings": {
+    "repo_file": "repos.txt",
+    "cutoff_days": 65
+  },
+  "jira": {
+    "server": "https://.atlassian.net",
+    "project_key": "SECURITY",
+    "status_values": ["In Progress", "Open", "Pending Review"],
+    "issuetype": "Bug",
+    "process_jira_tickets": true,
+    "workflow_states": {
+      "normal": ["Open", "Handover"],
+      "dev_dependency": ["Open", "Handover", "Not fixed"],
+      "risk_accepted": ["Open", "Handover", "Review", "Accept"]
+    },
+    "link_issue": false,
+    "outward_issue_key": "GTMS-23",
+    "link_type": "Relates",
+    "dismiss_no_patch": true,
+    "custom_fields": {
+      "customfield_10036": { "id": "10029" }
+    },
+    "auto_severity": true,
+    "severity_fields": {
+      "customfield_10036": {
+        "values": {
+          "P4": "10029",
+          "P3": "10028",
+          "P2": "10027",
+          "P1": "10026"
+        }
+      }
+    },
+    "team_field_id": "customfield_10037",
+    "team_mapping_file": "team_mapping.json"
+  }
+}

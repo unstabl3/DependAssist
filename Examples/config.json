@@ -1,0 +1,15 @@
+{
+  "github": {
+    "org_name": ""
+  },
+  "settings": {
+    "repo_file": "repos.txt",
+    "cutoff_days": 65
+  },
+  "jira": {
+    "server": "https://.atlassian.net",
+    "project_key": "PRODSEC",
+    "status_values": ["Backlog", "Engineering Owned", "In Progress", "Open", "PENDING REVIEW", "To Be Done"]
+  }
+}
+
