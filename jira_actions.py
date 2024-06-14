@@ -84,7 +84,7 @@ def create_ticket(jira, config, repo_name, alert, team_mappings):
     dependency_name = alert.get("dependency", {}).get("package", {}).get("name")
     description_text = alert.get("security_advisory", {}).get("description")
     description_text = convert_markdown_to_jira(description_text)
-    print(description_text)
+#    print(description_text)
     cve_id = alert.get("security_advisory", {}).get("cve_id")
     severity = alert.get("security_advisory", {}).get("severity").lower()
     summary = f"Vulnerable Library - {repo_name} - {dependency_name}"
