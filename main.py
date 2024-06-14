@@ -33,9 +33,9 @@ def main():
     cutoff_days = config['settings']['cutoff_days']
 
     cutoff_date = datetime.now(timezone.utc) - timedelta(days=cutoff_days)
-    print(f"Organization Name: {org_name}")
-    print(f"Repository File: {repo_file}")
-    print(f"Cutoff Days: {cutoff_days}")
+#    print(f"Organization Name: {org_name}")
+#    print(f"Repository File: {repo_file}")
+#    print(f"Cutoff Days: {cutoff_days}")
 
     try:
         with open(repo_file, 'r') as file:
@@ -52,10 +52,10 @@ def main():
                     first_patched_version = next((vul.get("first_patched_version", {}).get("identifier") for vul in vulnerabilities if vul.get("first_patched_version")), None)
 
                     # Debug print statements
-                    print(f"Package Name: {package_name}")
-                    print(f"Summary: {summary}")
-                    print(f"Advisory URL: {advisory_url}")
-                    print(f"First Patched Version: {first_patched_version}")
+#                    print(f"Package Name: {package_name}")
+#                    print(f"Summary: {summary}")
+#                    print(f"Advisory URL: {advisory_url}")
+#                    print(f"First Patched Version: {first_patched_version}")
 
                     if existing_tickets:
                         if is_advisory_url_in_issues(existing_tickets, advisory_url):
